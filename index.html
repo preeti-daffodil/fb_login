@@ -1,0 +1,27 @@
+
+
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	 
+	 var myfun=function(){
+	 	console.log('yes i m clicked');
+	 	$.ajax({
+            dataType: "json",
+            type: "POST",
+            data: {},
+            async: true,
+            url: "http://localhost:3000/rrr",
+            success: function (result) {
+                console.log("login res >> >> " + JSON.stringify(result));
+                // window.location = '/response?token=' + result.response.usertoken;
+            },
+            error: function (jqxhr) {
+                // alert("User not found or is not Approved yet.");
+            }
+        });
+	 }
+</script>
+<a href="http://localhost:3000/login">LOGIN FB</a>
+<div onclick="myfun()">LOGIN</div>
+</html>
