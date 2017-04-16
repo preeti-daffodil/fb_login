@@ -27,7 +27,7 @@ var httpConfig = function (app) {
                     return authFunctions.mangeUserCountInDB(final_data.id).then(function (login_count) {
                         var imgurl = final_data.picture.data.url;
                         var name = final_data.name;
-                        res.send("<div>Name : " + name + "</div><image src='" + imgurl + "'></image><div>Login Count : " + login_count + "</div><a href='http://" + req.hostname + ":" + config.PORT + "/login'>LOGOUT</a>")
+                        res.send("<div>Name : " + name + "</div><image src='" + imgurl + "'></image><div>Login Count : " + login_count + "</div><a href='http://" + req.host + ":" + config.PORT + "/login'>LOGOUT</a>")
                     })
                 });
             })
